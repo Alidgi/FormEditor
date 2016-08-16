@@ -1,1 +1,681 @@
-heelooo
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Главная страница</title>
+  <%= stylesheet_link_tag 'index', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  <%= javascript_include_tag "plugin.js" %>
+  <title>Медико-санитарная часть "Нефтяник"</title>
+</head>
+<body>
+<div class = "wrapper">
+  <header>
+    <div class = "header">
+      <div class = "header_content content_center">
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "./messages">8 (3452) 64-11-45, 64-11-35</a>
+          <p class = "header_address">поликлиника, ул.50 лет  ВЛКСМ, 19/1</p>
+        </div>
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "#">8 (3452) 46-32-91</a>
+          <p class = "header_address">поликлиника, ул. Шиллера, 12</p>
+        </div>
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "#">8 (3452) 32-98-01</a>
+          <p class = "header_address">договорной отдел</p>
+        </div>
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "#">8 (3452) 32-91-41</a>
+          <p class = "header_address">стационар, 4 км Червишевского тракта, стр. 1</p>
+        </div>
+        <div class = "header_content_lang">
+          <a title="Англоязычная версия сайта" rel="tooltip">
+            <%= image_tag('locales/langEn.png') %>
+          </a>
+          <a title="Русскоязычная версия сайта" rel="tooltip">
+            <%= image_tag('locales/langRu.png') %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class = "front_page">
+    <div class = "content">
+      <nav>
+        <div class = "nav_content content_center">
+          <a class = "logo" href = "#"><%= image_tag('front_page_up/nav/logo.png') %></a>
+          <div class = "search">
+            <form>
+              <input name = "utf8" type = "hidden" value = "✓">
+              <input type = "text" name = "keyword" id = "keyword" value = "" placeholder = "Поиск">
+              <input type = "submit" name = "commit" value = "" class = "go_search">
+            </form>
+            <a class = "button" href = "#">Версия для слабовидящих</a>
+          </div>
+          <div class = "menubar">
+            <ul>
+              <li class = "submenu">
+                <a class = "button" href = "#">О компании</a>
+                <%= image_tag("assets/images/front_page_up/nav/arrow_up.png")%>
+                <ul>
+                  <li style="border-top: none;">
+                    <a style="border-top: white 2px solid;" href = "#">О нас</a>
+                  </li>
+                  <li>
+                    <a href = "#">Специалисты</a>
+                  </li>
+                  <li>
+                    <a href = "#">Награды</a>
+                  </li>
+                  <li>
+                    <a href = "#">Партнеры</a>
+                  </li>
+                  <li>
+                    <a href = "#">Торги</a>
+                  </li>
+                  <li>
+                    <a href = "#">Вакансии</a>
+                  </li>
+                  <li>
+                    <a href = "#">Реквизиты</a>
+                  </li>
+                  <li>
+                    <a href = "#">Документы</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="button" href = "#">Направления</a>
+              </li>
+              <li class="submenu">
+                <a class="button" href = "#">Пациенту</a>
+                <%= image_tag("assets/images/front_page_up/nav/arrow_up.png")%>
+                <ul>
+                  <li>
+                    <a style="border-top: white 2px solid;" target="_blank" href = "#">Медицинский туризм</a>
+                  </li>
+                  <li>
+                    <a href = "#">Прайс-лист</a>
+                  </li>
+                  <li>
+                    <a href = "#">Мнение доктора</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="button" href = "#">Новости</a>
+              </li>
+              <li>
+                <a class="button" href = "#">СМИ о нас</a>
+              </li>
+              <li>
+                <a class="button" href = "#">Отзывы</a>
+              </li>
+              <li>
+                <a class="button" href = "#">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class = "block1">
+        <div class = "title content_center">
+
+          «Нефтяник» - авторитетный многопрофильный клинико-диагностический комплекс
+
+        </div>
+        <div class = "desc content_center">
+          Мы – единственное медицинское учреждение в Тюменской области, практикующее роботизированную, лазерную, эстетическую и пластическую хирургию.
+        </div>
+        <div class = "button_row content_center">
+          <a class = "button" href = "#">Подробнее о нас</a>
+          <a class = "button_red" href = "#">Записаться на прием</a>
+        </div>
+        <div class = "slider_block content_center">
+          <div id = "slider1" class = "slider_item">
+            <div class="slider_separator"></div>
+            <div class="slider_image">
+              <a id="sl1-0" style="z-index: 3;" class="">
+                <%= image_tag("slider/slider1/image1.png")%>
+              </a>
+              <a id="sl1-1" style="z-index: 2;" class="">
+                <%= image_tag("slider/slider1/image2.png")%>
+              </a>
+              <a id="sl1-2" style="z-index: 1;" class="">
+                <%= image_tag("slider/slider1/image3.png")%></a>
+            </div>
+          </div>
+          <div id = "slider2" class = "slider_item" style = "top: 30px;" >
+            <div class="slider_separator"></div>
+            <div class="slider_image">
+              <a id="sl2-0" style="z-index: 1;" class="">
+                <%= image_tag("slider/slider2/image1.png")%>
+              </a>
+              <a id="sl2-1" style="z-index: 0;" class="">
+                <%= image_tag("slider/slider2/image2.png")%>
+              </a>
+            </div>
+          </div>
+          <div id = "slider3" class = "slider_item">
+            <div class="slider_separator"></div>
+            <div class="slider_image">
+              <a id="sl3-0" style="z-index: 1;" class="">
+                <%= image_tag("slider/slider3/image1.png")%>
+              </a>
+              <a id="sl3-1" style="z-index: 0;" class="">
+                <%= image_tag("slider/slider3/image2.png")%>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="services_title content_center">
+          НАПРАВЛЕНИЯ КЛИНИКИ
+        </div>
+        <div class="services_block content_center">
+          <div class="services_column">
+            <ul>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img1.png")%>
+                </div>
+                <a href = "#">Поликлиника</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img2.png")%>
+                </div>
+                <a href = "#">Операционные</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img3.png")%>
+                </div>
+                <a href = "#">Палаты</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img4.png")%>
+                </div>
+                <a href = "#">Торакальная хирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img5.png")%>
+                </div>
+                <a href = "#">Хирургия вен (сосудистая хирургия)</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img6.png")%>
+                </div>
+                <a href = "#">Хирургия щитовидной железы</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img7.png")%>
+                </div>
+                <a href = "#">Робототизированная хирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img8.png")%>
+                </div>
+                <a href = "#">Брахитерапия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img9.png")%>
+                </div>
+                <a href = "#">Анестезиология и реанимация</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column1/img10.png")%>
+                </div>
+                <a href = "#">Хирургическое лечение ожирения</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services_column">
+            <ul>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img1.png")%>
+                </div>
+                <a href = "#">Гинекология</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img2.png")%>
+                </div>
+                <a href = "#">Абдоминальная хирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img3.png")%>
+                </div>
+                <a href = "#">Хирургическое лечение грыж различной локализации</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img4.png")%>
+                </div>
+                <a href = "#">Эндовидеохирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img5.png")%>
+                </div>
+                <a href = "#">Пластическая хирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img6.png")%>
+                </div>
+                <a href = "#">Урологический центр</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img7.png")%>
+                </div>
+                <a href = "#">Психотерапевтическая помощь</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img8.png")%>
+                </div>
+                <a href = "#">Check-up программы</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column2/img9.png")%>
+                </div>
+                <a href = "#">Нейрохирургия</a>
+              </li>
+            </ul>
+          </div>
+          <div class="services_column">
+            <ul>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img1.png")%>
+                </div>
+                <a href = "#">Лаборатория сна</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img2.png")%>
+                </div>
+                <a href = "#">ЛОР-хирургия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img3.png")%>
+                </div>
+                <a href = "#">Терапевтическая помощь</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img4.png")%>
+                </div>
+                <a href = "#">Диагностика</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img5.png")%>
+                </div>
+                <a href = "#">Физиотерапия</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img6.png")%>
+                </div>
+                <a href = "#">Компьютерная томография</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img7.png")%>
+                </div>
+                <a href = "#">Гнойно-септическая хирургия и колопроктология</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img8.png")%>
+                </div>
+                <a href = "#">Лечение боли</a>
+              </li>
+              <li>
+                <div class="services_img">
+                  <%= image_tag("services/column3/img9.png")%>
+                </div>
+                <a href = "#">Центр рассеянного склероза</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class = "block2">
+        <div class="opinion_title">
+          МНЕНИЕ ДОКТОРА
+        </div>
+        <div class="opinion_block content_center">
+          <div class="articles_slider slick-initialized slick-slider">
+            <div aria-live="polite" class="slick-list">
+              <div class="slick-track" style="opacity: 1; width: 860px; transform: translate3d(0px, 0px, 0px);" role="listbox">
+                <div class="doc_opinion_item slick-slide slick-current slick-active" style="outline: none; margin: 0px; width: 215px;" data-slick-index="0" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide00">
+                  <div class="doc_opinion_pict">
+                    <%= image_tag("articles/img1.jpg")%>
+                  </div>
+                  <a class="doc_opinion_item_title" style="width: 200px; height: 63px;" href="#" tabindex="0">ВСЕ, ЧТО НУЖНО ЗНАТЬ О ХРОНИЧЕСКОМ ТОНЗИЛЛИТЕ</a>
+                  <div class="doc_opinion_item_desc" style="width: 200px;  ">
+                    <p>Миф о "барьерной" функции небных миндалин ведет пациентов и врачей к неверной тактике....</p>
+                  </div>
+                </div>
+                <div class="doc_opinion_item slick-slide slick-active" style="outline: none; margin: 0px; width: 215px;" data-slick-index="1" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide01">
+                  <div class="doc_opinion_pict">
+                    <%= image_tag("articles/img2.jpg")%>
+                  </div>
+                  <a class="doc_opinion_item_title" style="width: 200px; height: 63px;" href="#" tabindex="0">О ЧЕМ ВЫ ХОТЕЛИ, НО НЕ РЕШАЛИСЬ СПРОСИТЬ О...</a>
+                  <div class="doc_opinion_item_desc" style="width: 200px;  ">
+                    В статье рассказывается о характерных проявлениях геморроя и каковы фактор риска...
+                  </div>
+                </div>
+                <div class="doc_opinion_item slick-slide slick-active" style="outline: none; margin: 0px; width: 215px;" data-slick-index="2" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide02">
+                  <div class="doc_opinion_pict">
+                    <%= image_tag("articles/img3.jpg")%>
+                  </div>
+                  <a class="doc_opinion_item_title" style="width: 200px; height: 63px;" href="#" tabindex="0">ИШЕМИЧЕСКАЯ БОЛЕЗНЬ СЕРДЦА В ДЕТАЛЯХ</a>
+                  <div class="doc_opinion_item_desc" style="width: 200px;  ">
+                    <p>Нормально работающее сердце нас практически не беспокоит, и мы даже забываем о его...</p>
+                  </div>
+                </div>
+                <div class="doc_opinion_item slick-slide slick-active" style="outline: none; margin: 0px; width: 215px;" data-slick-index="3" aria-hidden="false" tabindex="0" role="option" aria-describedby="slick-slide03">
+                  <div class="doc_opinion_pict">
+                    <%= image_tag("articles/img4.jpg")%>
+                  </div>
+                  <a class="doc_opinion_item_title" style="width: 200px; height: 63px;" href="#" tabindex="0">ВРАЧ-УРОЛОГ О СТРЕССОВОМ НЕДЕРЖАНИИ МОЧИ У...</a>
+                  <div class="doc_opinion_item_desc" style="width: 200px;  ">
+                    Диалог с врачом-урологом о стрессовом недержании мочи у женщин. Деликатная проблема и в...
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="to_all_articles">
+            <a class="button_info" href = "#" style="text-align: center;">Все статьи</a>
+          </div>
+        </div>
+      </div>
+      <div class = "block3">
+        <div class = "block3_content content_center">
+          <div class = "block3_title">
+            ПРЕИМУЩЕСТВА КЛИНИКИ «НЕФТЯНИК»
+          </div>
+          <div class = "advantages">
+            <div class="rows" style="width: 100%;">
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row1img1.png")%>
+                </div>
+                <div class="descs">
+                  Комплексное медицинское обслуживание
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row1img2.png")%>
+                </div>
+                <div class="descs">
+                  Высочайшая квалификация врачей
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row1img3.png")%>
+                </div>
+                <div class="descs">
+                  Значительно меньшая стоимость услуг
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row1img4.png")%>
+                </div>
+                <div class="descs">
+                  Отличные результаты после операций
+                </div>
+              </div>
+            </div>
+            <div class="rows" style="width: 75%;">
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row2img1.png")%>
+                </div>
+                <div class="descs">
+                  Комфортные условия пребывания
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row2img2.png")%>
+                </div>
+                <div class="descs">
+                  Новейшее медицинское оборудование
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row2img3.png")%>
+                </div>
+                <div class="descs">
+                  Междисциплинарный подход
+                </div>
+              </div>
+              <div class="items">
+                <div class="pics">
+                  <%= image_tag("advantages/row2img4.png")%>
+                </div>
+                <div class="descs">
+                  Собственная минеральная скважина
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class = "reg_block">
+        <div class = "reg_block_content content_center">
+          <div class = "reg_block_title">
+            ЭЛЕКТРОННАЯ ЗАПИСЬ
+          </div>
+          <div class = "reg_form">
+            <div class = "form_row" style = "padding-top: 10px;">
+              <a class = "button large">Запись на компьютерную томографию</a>
+              <a class = "button medium" id = "colonoscopy" data-effect="mfp-with-fade">Запись на колоноскопию</a>
+              <a class = "button_red small">Записаться на прием</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--<div id="vacancy_feedback" class="vacancy_modal mfp-with-anim mfp-hide" style="height: 335px;">
+        <div class="panel">
+          <div class="panel_header">
+            <span class="panel_title">
+              Запись на колоноскопию
+            </span>
+          </div>
+          <div class="panel_form">
+            <form class="new_request" id="new_request" action="/requests?locale=ru" accept-charset="UTF-8" method="post">
+              <input name="utf8" type="hidden" value="✓">
+              <input type="hidden" name="authenticity_token" value="Yu/kdCCveGmsbE/ywMbsh3uKSFaveYI+6B2EbrPHbCnRixZ3V2QL16oI3opU7QHwvmAllb/ViVK9+25vq1eg9Q==">
+              <div class="panel_form_row">
+                <input type="text" name="name" id="name" value="" placeholder="Имя" class="form_text">
+                <input type="text" name="contacts" id="contacts" value="" placeholder="E-Mail или телефон" class="form_text">
+              </div>
+              <div class="panel_form_row">
+                <textarea name="comment" id="comment" placeholder="Комментарий" class="form_text" style="width: 468px; height: 124px; padding-top: 10px; resize: none;"></textarea>
+              </div>
+              <div class="submit_row">
+                <a class="button_red colonoscopy_submit" style="text-align: center; margin-top: 27px;" href="#">Отправить</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>-->
+      <div class = "partners_block">
+        <div class = "partners_block_content content_center">
+          <div class="partners_row">
+            <a target="_blank" href="https://www.rosminzdrav.ru/polls/9-anketa-dlya-otsenki-kachestva-okazaniya-uslug-meditsinskimi-organizatsiyami-v-ambulatornyh-usloviyah?region_code=TYU">
+              <%= image_tag("partners/partner1.png")%></a>
+            <a target="_blank" href="http://clinica72.ru/ru/content_pages/akcia2000rubperday" style = "margin-left: 32px;">
+              <%= image_tag("partners/partner2.png")%></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="reloaded"></div>
+</div>
+<footer>
+  <div class="footer_up">
+    <div class="footer_up_content content_center">
+      <div class="footer_up_content_item">
+        <a href="/ru/contacts" class="footer_telephone" href = "#">8 (3452) 64-11-45, 64-11-35</a>
+        <p class="footer_contact">поликлиника, ул.50 лет  ВЛКСМ, 19/1</p>
+      </div>
+      <div class="footer_up_content_item">
+        <a href="/ru/contacts" class="footer_telephone" href = "#">8 (3452) 46-32-91</a>
+        <p class="footer_contact">поликлиника, ул. Шиллера 12</p>
+      </div>
+      <div class="footer_up_content_item">
+        <a href="/ru/contacts" class="footer_telephone" href = "#">8 (3452) 32-98-01</a>
+        <p class="footer_contact">договорной отдел</p>
+      </div>
+      <div class="footer_up_content_item">
+        <a href="/ru/contacts" class="footer_telephone" href = "#">8 (3452) 32-91-41</a>
+        <p class="footer_contact">стационар</p>
+      </div>
+      <div class="footer_up_content_item map_point_block">
+        <span class="footer_map_point">4 км Червишевского тракта, строение 1</span>
+      </div>
+    </div>
+  </div>
+  <div class="footer_down">
+    <div class="footer_down_content content_center">
+      <ul class="footer_menu">
+        <li>
+          <a class="footer_link" href="/ru/about_us">О компании</a>
+        </li>
+        <li style="padding-left: 16px;">
+          <a class="footer_link" href="#">Пациенту</a>
+        </li>
+        <li>
+          <a class="footer_link" href="/ru/clinic">Направления</a>
+        </li>
+        <li>
+          <a class="footer_link" href="/ru/news">Новости</a>
+        </li>
+        <li>
+          <a class="footer_link" href="/ru/contacts">Контакты</a>
+        </li>
+        <li>
+          <a class="footer_link" href="#">Отзывы</a>
+        </li>
+        <li>
+          <a class="footer_link" href="/ru/mass_media">СМИ о нас</a>
+        </li>
+        <li style="width: 20px;">
+          <a class="arrow_button" href="#">
+            <%= image_tag("footer/arrow_up.png")%></a>
+        </li>
+      </ul>
+      <ul class="footer_submenu">
+        <li>
+          <a href="#">О нас</a>
+        </li>
+        <li>
+          <a href="#">Специалисты</a>
+        </li>
+        <li>
+          <a href="#">Награды</a>
+        </li>
+        <li>
+          <a href="#">Партнеры</a>
+        </li>
+      </ul>
+      <ul class="footer_submenu">
+        <li>
+          <a href="#">Торги</a>
+        </li>
+        <li>
+          <a href="#">Вакансии</a>
+        </li>
+        <li>
+          <a href="#">Реквизиты</a>
+        </li>
+        <li>
+          <a href="#">Документы</a>
+        </li>
+      </ul>
+      <ul class="footer_submenu">
+        <li>
+          <a target="_blank" href="http://medturism72.ru/nft">Медицинский туризм</a>
+        </li>
+        <li>
+          <a href="#">Прайс-лист</a>
+        </li>
+        <li>
+          <a href="#">Мнение доктора</a>
+        </li>
+      </ul>
+      <div class="rights_row">
+        <span class="rights_text">© 2016 «Нефтяник» все права защищены</span>
+        <div class="developer_row">
+          <span class="developers">Разработка сайта - </span><a href="http://mintrocket.ru">mintrocket</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<a id = "stick1" href="#" class="sticky_menu" style="bottom: 20px;" onclick="openSticky()">
+  <%= image_tag('icon.png') %>
+  Оставьте нам сообщение
+</a>
+<div id = "stick2" class="sticky_feedback">
+  <div class="sticky_header">
+    Оставьте нам сообщение
+    <a class="sticky_close_button" href="#" onclick="closeSticky()">X</a>
+  </div>
+  <div class="sticky_form">
+    <div class="sticky_about">
+      Если у Вас возникли вопросы,
+      оставьте, пожалуйста, сообщение.
+      Мы обязательно свяжемся с Вами!
+    </div>
+    <form class="new_contact_feedback" id="new_contact_feedback" action="/contact_feedback_create?locale=ru" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="0h1NSQES+seYTLluunc+VBMC4fEZ3D6oJN9rV9NQFSpheb9KdtmJeZ4oKBYuXNMj1uiMMglwNcRxOYFWy8DZ9g==">
+      <label for="name_Ваше имя">Ваше имя</label>
+      <input type="text" name="f_name" id="f_name" value="">
+
+      <div class="sticky_contacts_block" style="width: 51%;">
+        <label for="contacts_Ваш e-mail">Ваш e-mail</label>
+        <input type="text" name="f_email" id="f_email" value="">
+      </div>
+
+      <div class="sticky_contacts_block" style="width: 47%;">
+        <label for="contacts_Ваш телефон">Ваш телефон</label>
+        <input type="text" name="f_contacts" id="f_contacts" value="">
+      </div>
+
+
+      <label for="body_Сообщение">Сообщение</label>
+      <textarea name="f_body" id="f_body"></textarea>
+
+      <a class="send_message_button" href="#">Отправить</a>
+      <a class="sticky_close_button" href="#" onclick="closeSticky()">Закрыть</a>
+    </form>  </div>
+</div>
+</body>
+</html>
