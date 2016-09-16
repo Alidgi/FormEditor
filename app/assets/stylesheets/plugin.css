@@ -1,0 +1,72 @@
+/* Header */
+.texture {
+    background: url(../images/main_texture.png) center 0 repeat-y;
+}
+header {
+    display: block;
+    position: relative;
+    z-index: 700;
+    text-align: center;
+}
+header .rel {
+    z-index: 999;
+}
+header h1 {
+    z-index: 999;
+    float: left;
+    font: 300 60px/40px 'Open Sans Condensed', sans-serif;
+}
+header h1 a {
+    display: block;
+    -webkit-transition: 0s ease;
+    transition: 0s ease;
+    color: #ffffff;
+}
+
+/* Navigator */
+.navigation {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.59);
+    position: fixed;
+    z-index: 900;
+    top: 0;
+    left: 0;
+    padding: 57px 0 66px;
+    right: 0;
+    text-align: center;
+}
+.navigation nav {
+    float: right;
+    color: #ffffff;
+}
+.navigation li {
+    display: inline-block;
+    padding-top: 5px;
+    font: 30px/40px 'Yanone Kaffeesatz', sans-serif;
+}
+.navigation li + li {
+    margin-left: 52px;
+}
+.navigation li a {
+    position: relative;
+}
+.navigation li a:after {
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
+    position: absolute;
+    height: 1px;
+    top: 100%;
+    margin-top: 7px;
+    content: '';
+    left: 0;
+    right: 100%;
+    background-color: #ffffff;
+}
+.navigation li a:hover,
+.navigation li a.current {
+    color: inherit;
+}
+.navigation li a:hover:after,
+.navigation li a.current:after {
+    right: 0;
+}

@@ -1,2 +1,2 @@
-module EditorHelper
+module MainHelper
 end
