@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Проект</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" type="text/css">
+  <%= javascript_include_tag "plugin.js" %>
+  <title>Медико-санитарная часть "Нефтяник"</title>
+</head>
+<body>
+<div class = "wrapper">
+  <header>
+    <div class = "header">
+      <div class = "header_content content_center">
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "#">Главная страница</a>
+          <p class = "header_address">Default</p>
+        </div>
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "#">Страница редактирования</a>
+          <p class = "header_address">Работа не начата</p>
+        </div>
+        <div class = "header_content_phones">
+          <a class = "header_telephone" href = "./messages">Страница сообщений</a>
+          <p class = "header_address">Работа начата</p>
+        </div>
+        <div class = "header_content_lang">
+          <a title="Англоязычная версия сайта" rel="tooltip">
+            <%= image_tag('locales/langEn.png') %>
+          </a>
+          <a title="Русскоязычная версия сайта" rel="tooltip">
+            <%= image_tag('locales/langRu.png') %>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class = "front_page">
+    <ol>
+      <%= render @messages %>
+    </ol>
+    <%= will_paginate @messages %>
+  </div>
+</div>
+</body>
+</html>
